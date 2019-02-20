@@ -1,0 +1,13 @@
+@using PlacesYouveBeen.Models;
+
+<h1>Places You've Been</h1>
+@foreach (Place beenTo in @Place.GetTravelDiary())
+{    
+    <ul>
+        <li>City Name: @beenTo.GetCityName()</li>
+        <li>Trip Length: @beenTo.GetTimeStayed()</li>
+        <li>Journal Entry: @beenTo.GetJournal()</li>
+        <p>-----------------------------------</p>
+    </ul>
+}
+<a href="/">Click here to add another trip to your list!</a>
